@@ -1,6 +1,6 @@
 """ 
 ~   	nailpolish.py
-~	Writes a little piece of poetry stirring Essie beautiful nail colors.
+~	Writes a little piece of poetry mixing Essie beautiful nail colors.
 ~	Created by Sabrina Matrullo on 2013-02-14 
 ~ 	Happy valentine's day :)
 ~
