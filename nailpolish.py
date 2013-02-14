@@ -1,5 +1,5 @@
 """ 
-~   nailpolish.py
+~   	nailpolish.py
 ~	Writes a little piece of poetry stirring Essie beautiful nail colors.
 ~	Created by Sabrina Matrullo on 2013-02-14 
 ~ 	Happy valentine's day :)
