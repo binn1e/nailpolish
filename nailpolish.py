@@ -1,6 +1,6 @@
 """ 
-~   	nailpolish.py
-~	Writes a little piece of poetry mixing Essie beautiful nail colors.
+~ 	nailpolish.py
+~	Writes a little piece of poetry stirring Essie beautiful nail colors.
 ~	Created by Sabrina Matrullo on 2013-02-14 
 ~ 	Happy valentine's day :)
 ~
@@ -29,6 +29,10 @@ for option in soup[1:]:
 	if str(option).find('colors'):	
 		colors.append(option.string.encode('utf8', 'replace').strip().lower())
 
+oneVerseColors = 3 # standard number of colors used to write one verse
+twoVersesColors = 6 # standard number of colors used to write two verse
+limitedColors = 2 # low number of colors used to write one or two verses
+
 repeat = False
 for key, char in enumerate(person):
 	
@@ -47,27 +51,28 @@ for key, char in enumerate(person):
 		if p.match(color): 
 			charColorMatch.append(color)
 	lColor = len(charColorMatch)
-
+	
+	# found a color at least
 	if lColor > 1:  
 		# how many colors do we need and can we use at a time ?
 		rand = []
-		if lColor == 2: lRand = 2			
-		elif lColor > 3 and not repeat: lRand = 3
-		else: lRand = 6
+		if lColor < oneVerseColors: lRand = limitedColors		
+		elif lColor >= oneVerseColors and not repeat: lRand = oneVerseColors
+		else: lRand = twoVersesColors
 
-		if lColor < lRand:
+		if lColor < lRand: # not enough colors to create our verse(s) : using them all
 			for i in range(0,lColor): 
 				rand.append(i)
-		else:
+		else: # enough colors to reach a certain prose variety 
 			while len(rand) < lRand :
 				number = random.randint(0, lColor-1)
 				if rand.count(number) == 0:	
 					rand.append(number)
 	
 		# generating essie poetry 
-		if lRand == 3:
+		if lRand == oneVerseColors:
 			print char.upper() + charColorMatch[rand[0]][1:] + ' ' + charColorMatch[rand[1]] + ', ' + charColorMatch[rand[2]]
-		elif lRand == 2:
+		elif lRand == limitedColors:
 			if not repeat:
 				print charColorMatch[rand[0]][:1].upper() + charColorMatch[rand[0]][1:] + ' ' + charColorMatch[rand[1]]	
 			else:  # two colors only match this repeating char, pretty boring : let's just invert colors for the second sentence
