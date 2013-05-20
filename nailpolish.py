@@ -15,25 +15,24 @@ except IndexError :
 	person = str(raw_input("Please enter someone to nailpolish : "))
 
 # get essie html 
-url = "http://www.essie.com/nail-colors"
+url = "http://www.essie.com/Colors.aspx"
 response = urllib2.urlopen(url)
 html = response.read()
 
 # making the soup
 soup = BeautifulSoup(html)
-soup = soup.find_all('option')
+soup = soup.find_all('h2')
+
+oneVerseColors = 3 # standard number of colors used to write one verse
+twoVersesColors = 6 # standard number of colors used to write two verses
+limitedColors = 2 # low number of colors used to write one or two verses
+repeat = False
 
 # fetching colors
 colors = []
 for option in soup[1:]:
-	if str(option).find('colors'):	
-		colors.append(option.string.encode('utf8', 'replace').strip().lower())
+	colors.append(option.string.encode('utf8', 'replace').strip().lower())
 
-oneVerseColors = 3 # standard number of colors used to write one verse
-twoVersesColors = 6 # standard number of colors used to write two verse
-limitedColors = 2 # low number of colors used to write one or two verses
-
-repeat = False
 for key, char in enumerate(person):
 	
 	# just wrote two sentences from a character that's gonna repeat itself
