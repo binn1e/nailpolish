@@ -1,3 +1,6 @@
+#!/usr/bin/python
+# -*- coding: UTF-8 -*-
+
 """ 
 ~ 	nailpolish.py
 ~	Writes a little piece of poetry stirring Essie beautiful nail colors.
