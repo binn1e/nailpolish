@@ -33,7 +33,7 @@ repeat = False
 
 # fetching colors
 colors = []
-for option in soup[1:]:
+for option in soup:
 	colors.append(option.string.encode('utf8', 'replace').strip().lower())
 
 for key, char in enumerate(person):
