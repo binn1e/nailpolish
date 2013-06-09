@@ -1,7 +1,7 @@
-essiePoetry
+nailpolish
 ============
 
-The nailpolish.py file takes one argument and will output a little poem mixing Essie nail colors and following the name entered.
+— the nailpolish.py file takes one argument and will output a little poem mixing essie.com nail colors and following the name entered.
 
 <code>
 binnie@binnie:~/dev/python/essie poetry$ python nailpolish.py marie-charlotte  
@@ -21,4 +21,4 @@ Tart deco tangerine, tea & crumpets
 East hampton cottage eternal optimist, escapades  
 </code>
 
-Dependencies : BeautifulSoup
+— dependencies : BeautifulSoup
