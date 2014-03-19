@@ -4,7 +4,8 @@ nailpolish
 — The nailpolish.py file takes one argument and will output a little poem mixing Essie nail colors and following the name entered.
 
 <code>
-binnie@binnie:~/dev/python/essie poetry$ python nailpolish.py marie-charlotte  
+$ python nailpolish.py marie-charlotte  
+
 Mojito madness miami nice, mini how high  
 All tied up allure, after sex  
 Really red recessionista, raspberry  
