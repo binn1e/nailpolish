@@ -5,6 +5,7 @@ nailpolish
 
 <code>
 $ python nailpolish.py marie-charlotte  
+
 Mojito madness miami nice, mini how high  
 All tied up allure, after sex  
 Really red recessionista, raspberry  
